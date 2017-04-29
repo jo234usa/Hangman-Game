@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game/Fun with functions</title>
+</head>
+<body>
+
+<h1>Help Free the Animals! </h1>
+
+<p>Oh no! Someone is trapping all the animals! Like Aladdin's "open sesame," the right word can free them. Guess the word to collapse their cages.</p>
+
+<!-- <p>You have 9 chances</p>  -->
+
+<button onclick="startGame()">click here to begin!</button>
+
+<!-- <p>press any key to begin!</p> -->
+
+<p id="display"></p>
+
+<!-- <button onclick="chooseWord()">click here to begin!</button> -->
+
+<script type="text/javascript">
+
+// Our array of possible computer choices.
+var guessWord = ["captive", "conservation", "endangered", "exotic", "habitats", "imported", "indegenous", "preservation", "protection", "scarce", "splendid", "vulnerable"]
+
+// Variables for tracking our wins, losses and ties. They begin at 0.
+    var wins = 0;
+    var losses = 0;
+    var ties = 0;
+        
+ //Game
+ //for a given word
+//  display _ for the word length
+// function chooseWord () {
+
+// Sets the computerGuess variable equal to a random choice from the computerChoice array.
+  var wordChoice = guessWord[Math.floor(Math.random() * guessWord.length)];
+
+//Display number of dashes for number of letters in word
+ function startGame() {
+  var dashNumbers = wordChoice.length;
+  var dash = " - ";
+  document.getElementbyID("display").innerHTML = dash.repeat();
+}
+
+//get userGuess
+
+ // When the user presses a key, it will run the following function...
+      // document.onkeyup = function(event) {
+
+ // Determine which key was pressed
+      // var userGuess = event.key;
+      
+ //if userGuess === a letter in word, then letter replaces _ on-screen
+ //else draw a line in cage, print out the wrong letter, and the number of guesses remaining decreases.
+ //once this for up to 9 times that the 
+ // if the whole word is guessed, then win
+ // else lose
+ 
+
+ // Here we create the HTML that will be injected into our div and displayed on the page.
+       var html = 
+       "<p>wins: " + wins + "</p>" +
+       "<p>losses: " + losses + "</p>" +
+       "<p>ties: " + ties + "</p>";
+
+  // }
+
+</script>
+
+</body>
+</html>
